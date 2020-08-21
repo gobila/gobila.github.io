@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="assets/fonts/awesome/css/all.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript"> 
+      $(document).ready(function(){
+      $('.collapse').on('show.bs.collapse', function () {
+          $('.collapse.show').each(function(){
+              $(this).collapse('hide');
+          });
+        });
+      });
+    </script>
+  <!--animaçâo do scroll-->
+  <script type="text/javascript">
+              
+        var root = document.documentElement;
+        root.className += ' js';
+
+        function boxTop(idBox) {
+          var boxOffset = $(idBox).offset().top;
+          return boxOffset;
+        }
+        //PROGRESSO
+        $(document).ready(function() {
+          var $target = $('.progress-bar'),
+              animationClass = 'anime-init-progress',
+              windowHeight = $(window).height(),
+              offset = windowHeight - (windowHeight / 12);
+
+          function animeScroll() {
+            var documentTop = $(document).scrollTop();
+            $target.each(function() {
+              if (documentTop > boxTop(this) - offset) {
+                $(this).addClass(animationClass);
+                $(this.$target1).addClass(animationClass)
+              } else {
+                $(this).removeClass(animationClass);
+              }
+            });
+          }
+          animeScroll();
+
+          $(document).scroll(function() {
+            animeScroll();
+          });
+        });
+
+        //outras animações
+        $(document).ready(function() {
+          var $target = $('.ani'),
+              animationClass = 'anime-init-outer',
+              windowHeight = $(window).height(),
+              offset = windowHeight - (windowHeight / 12);
+
+          function animeScroll() {
+            var documentTop = $(document).scrollTop();
+            $target.each(function() {
+              if (documentTop > boxTop(this) - offset) {
+                $(this).addClass(animationClass);
+                $(this.$target1).addClass(animationClass)
+              } else {
+                $(this).removeClass(animationClass);
+              }
+            });
+          }
+          animeScroll();
+
+          $(document).scroll(function() {
+            animeScroll();
+          });
+        });
+  </script>
+  <!--menu sobreposto-->
+  <script type="text/javascript">
+    $(window).scroll(function() {    
+var scroll = $(window).scrollTop();
+  if (scroll >= 40) {               // se rolar 40px ativa o evento
+    $("#nav").addClass("fixed-top");    //coloca a classe "ativo" no id=menu
+  } else {
+    $("#nav").removeClass("fixed-top"); //se for menor que 40px retira a classe "ativo" do id=menu
+  }
+});
+  </script>
+  </head>
+  <body class="text-center">
+      <header>
+        <nav class="nav " id="nav">
+          <h3 class="col-md-6" id="nav-name">Moises Cardozo de Paula</h3>
+          <div class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="#about"> sobre mim </a>
+            <a class="nav-link" href="#formacao">Formação</a>
+            <a class="nav-link" href="#experiencia">Experiencia</a>
+            <a class="nav-link" href="#skill">Habilidades</a>
+            
+            </div>
+        </nav>
+      </header>
+
+      
+
+      <!--ABOUT ME-->
+      <section id="about">
+        <h2>Sobre mim</h2>
+
+        <div class="" id="containerAbout">
+          <div class="col-md-8">
+
+            <!-- colapse group-->
+            <div id="myGroup">
+              <!--butons-->
+              <p>
+                <!--ME-->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" id="seta" autofocus
+                data-target="#About-me" aria-expanded="false" aria-controls="About-me" data-parent="#myGroup">
+                  <span>Sobre me</span> 
+                </button>
+                <!--WORK-->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" id="seta" 
+                data-target="#work" aria-expanded="false" aria-controls="work" data-parent="#myGroup">
+                  <span>Vida profissional</span> 
+                </button>
+                <!--FUN-->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" id="seta" 
+                data-target="#fun" aria-expanded="false" aria-controls="fun" data-parent="#myGroup">
+                  <span>Hobbies</span>
+                </button>
+                <!--CODE-->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" id="seta" 
+                data-target="#code" aria-expanded="false" aria-controls="code" data-parent="#myGroup">
+                    <span>Projeto atual</span>
+                </button>
+                <!--GIT-->
+                <button class="btn btn-primary" type="button" data-toggle="collapse" id="seta" 
+                data-target="#git" aria-expanded="false" aria-controls="git" data-parent="#myGroup">
+                    <span>GitHub</span>
+                </button>
+              </p>
+
+              <!-- TXT BOX-->
+              <div class="row">
+                <div class="col">
+                  <!--ME-->
+                  <div class="collapse show" id="About-me">
+                    <div class="card card-body">
+                      <p class="text">
+                        Sou desenvolvedor Front End, escolhi ser desenvolvedor porque queria trabalhar com jogos e cheguei a 
+                        desenvolver um na universidade como parte pratica de trabalhos, mas mesmo antes disso já desenvolvia 
+                        joguinhos usando o rpgmaker. O meu gosto por jogos e me levou a estudar um pouco de 3D e fotografia 
+                        que virou um hobby.<br>
+                        Outro motivo é o meu gosto por descobrir coisas novas e criar algo com isso ou usar para solucionar 
+                        algum problema. Isso tem me feito estudar mais sobre desenvolvimento nativo de aplicativos e colocar 
+                        na minha lista o estudos futuros o uso inteligência artificial para desenvolvimento de aplicativos e 
+                        jogos por voz.<br>
+                        Atualmente sou professor no instituto tecnológico do Goiás
+
+                      </p>
+                    </div>
+                  </div>
+                  <!--WORK-->
+                  <div class="collapse" id="work">
+                    <div class="card card-body">
+                      <p class="text">
+                        Trabalho com desenvolvimento desde 2014, principalmente com Front End, trabalhei em uma empresa do 
+                        ramo automotivo melhorando a interface de seus canais online e logo a após em uma empresa especializada 
+                        em criar sistemas para outras empresas.<br>
+                        Em 2017, no entanto, comecei por trabalhar ministrando aulas e coordenando cursos na escola técnica do
+                        Pará, o que possibilitou principalmente o meu envolvimento com organização de eventos de tecnologia e 
+                        projetos de pesquisa tendo assim mais contato com áreas que não o desenvolvimento de sistemas. Isso me 
+                        ajudou a ser menos tímido, ou ter cara de pau para tentar disfarçar o nervosismo (depende do ponto de visto).
+                        Mas apesar de gostar de ministrar aulas, conhecer gente nova e trocar figurinhas nos eventos, eu sinto falta 
+                        de trabalhar com programação pois as aulas não deixam muito tempo para isso.
+                      </p>
+                    </div>
+                  </div>
+                  <!--FUN-->
+                  <div class="collapse" id="fun">
+                    <div class="card card-body">
+                      <p class="text">
+                        Eu gosto muito de jogar videogame, ultimamente estou alternando entre F1, Forza Horizon, 
+                        Stardew Valley e Sea of Thives. Mas já passei muito tempo no Ragnarock e CS. <br>
+                        Também gosto de fotografia, apesar de não poder mais sair para fotografar nem capturar Pokémon. <br>
+                        Brinco com impressão 3d e raspberry.<br>
+                        Tento aprender a tocar uculele. <br>
+                      </p>
+                    </div>
+                  </div>
+                  <!--CODE-->
+                  <div class="collapse" id="code">
+                    <div class="card card-body">
+                      <p class="text">
+                        Estou estudando sobre desenvolvimento mobile e estou fazendo como projeto pessoal um afinador 
+                        para violão/ukulele e a ideia é que além de afinar mostre também acordes e os reconheça.<br>
+                        comecei um projeto pessoal voltado para assistente Alexa como forma de estudar a tecnologia de voz.
+                      </p>
+                    </div>
+                  </div>
+                  <!--GIT-->
+                  <div class="collapse" id="git">
+                    <div class="card card-body">
+                      <p class="text">
+                        Nas empresas que trabalhei a cultura era de se subir os projetos para servidores próprios, e como professor 
+                        vários projetos eram feitos em sala de aula.<br>
+                        No início do ano excluir alguns projetos que estavam pela metade e não fazia sentido manter deixando apenas 
+                        dois repositórios um de evento e outro de teste que ainda precisa de ajustes.<br>
+                        E pelo meu GitHub ter só isso decidir fazer essa landing Page e mostrar o que sei.<br>
+
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+            <p></p>
+            
+
+            <!--p class="text" id="1">
+              Sou desenvolvedor Front End e atualmente professor no instituto tecnológico do Goiás.
+              Trabalho com desenvolvimento desde 2014, principalmente com Front End, trabalhei em uma empresa do 
+              ramo automotivo melhorando a interface de seus canais online e logo a após em uma empresa especializada
+               em criar sistemas para outras empresas.
+              Em 2017, no entanto, comecei por trabalhar ministrando aulas e coordenando cursos na escola técnica do 
+              Pará, o que possibilitou principalmente o meu envolvimento com organização de eventos de tecnologia e 
+              projetos de pesquisa tendo assim mais contato com áreas que não o desenvolvimento de sistemas. 
+              Isso me ajudou a ser menos tímido, ou ter cara de pau para tentar disfarçar o nervosismo (depende do ponto de visto). 
+              Mas apesar de gostar de ministrar aulas, conhecer gente nova e trocar figurinhas nos eventos, eu sinto falta de 
+              trabalhar com programação pois as aulas não deixam muito tempo para isso.
+              E como me divirto? Eu gosto muito de jogar videogame, ultimamente estou alternando entre F1, Forza Horizon, Stardew Valley e Sea of Thives. Mas já passei muito tempo no Ragnarock e CS. 
+              Também gosto de fotografia, apesar de não poder mais sair para fotografar nem capturar Pokémon.
+              Brinco com impressão 3d e raspberry
+              Tento aprender a tocar ukulele 
+              O que ando codando?
+              Estou estudando sobre desenvolvimento mobile e estou fazendo como projeto pessoal um afinador para violão/ukulele e a ideia é que além de afinar mostre também acordes e os reconheça.
+              Comecei um projeto pessoal voltado para assistente Alexa como forma de estudar a tecnologia de voz
+              GitHub vazio?
+              Nas empresas que trabalhei a cultura era de se subir os projetos para servidores próprios, e como professor vários projetos eram feitos em sala de aula.
+              No início do ano excluir alguns projetos que estavam pela metade e não fazia sentido manter deixando apenas dois repositórios um de evento e outro de teste que ainda precisa de ajustes.
+              E pelo meu GitHub ter só isso decidir fazer essa landing Page e mostrar o que sei             
+             </p-->
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="assets/img/IMG_4049.JPG" alt="" />
+          </div>
+        </div>
+
+
+      </section>
+
+      <!--Formação-->
+      <section id="formacao">
+        <h2>Formação Academica</h2>
+        <div class="container" style="flex-direction: column;">
+          <div class="row">
+            <div class="text" style="display:flex;">
+              <p class="col-md-12" style="text-align: center;">
+                Graduação : <c style="color:tomato">Universidade do Estado do Pará - UEPA</c><br>
+                Curso : <c style="color:tomato">Tecnologia de Análise e Desenvolvimento de Sistemas</c><br>
+                Ano : <c style="color:tomato">2014</c><br>
+              </p>
+              
+            </div>
+          </div>
+          <div class="row" style="flex-wrap:nowrap">
+            
+            <div class="text" style="display:flex;">
+            <p class="col-md-6" style="text-align: center;">
+              Especialização : <c style="color:tomato">Universidade Estácio de Sá</c><br>
+              Curso : <c style="color:tomato">Engenharia de software</c><br>
+              Ano : <c style="color:tomato">2019</c><br>
+            </p>
+            <p class="col-md-6" style="text-align: center;">
+              Especialização : <c style="color:tomato">Universidade Estácio de Sá</c><br>
+              Curso : <c style="color:tomato">Seguraça da informação</c><br>
+              Ano : <c style="color:tomato">2019</c><br>
+            </p></div>
+          </div>
+          <div class="row ani" id="sai">
+            <p >
+              <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4373200J6&tokenCaptchar=03AGdBq2559TtQ9RFB2WxZqcO1nb_-5mlOl4oqTPopy9E6D1b7u2ric_Pvb5u3X-W5KQwFRXC3D96pG5uqsngNakbUl8f4n0ZVDjIrb6f7EoWGcPxYXF4yKYRV0ydSuqJ6Tkt7Rhz26NrwplPN1y99p8BWCyH9tRok8kZel9Q_R3ROPCelEtbklPpA1EUKhYJO7_CZ-woeolsEZbimWLGUeeFopKO1V0iW1pyDBA_rNoxt751I-mL_srtKkXo-TZhKYZqVhqjq3PkNiun8hdAqEa0daAU8z1xnkz5MvFKa1SWfxCsBy_vP-cpXs_u2hpXP-0--mem-BzjR-DLZdAkghvwsSQit3CuMV0qbmvZhYgSl8UwhucXXtXpI4ZamHEIOL6bf5PaMo8xqlpqE-9S29Ca-ssjlx6yl2ugwo050N9MPLOyi_Q-BU8kzQtVI8doEoN9GcXlMhnGcLFFrh3jWNUqBdqBS7Hr5iA">
+                <p  style="text-align: center;"class="text">
+                  Click aqui para mais detalhes academicos na plataforma Lattes do CNPQ
+                  <i class="fas fa-university fa-2x"></i>
+                </p>
+              </a>
+            </p>
+            
+          </div>
+        </div>
+      </section>
+
+
+
+        <!--expreriencia-->
+      <section id="experiencia">
+        <h2>Experiencia Proficional</h2>
+            <div id="containerAbout" style="width: 100%;">
+              <p class="text col-sm-3" style="align-self: center">
+                ITEGO / 2019<br>
+                Cargo: Professor
+              </p>
+              <p class="text col-sm-8">
+                Principais funções: Planejar e ministrar aulas relacionadas a grade de tecnologia e
+                desenvolvimento; realizar aulas práticas de desenvolvimentos; planejar palestras e eventos com
+                alunos e outras instituições de ensino.
+              </p>
+            </div>
+            <div class="container" >
+              <p class="text col-sm-3" style="align-self: center">
+                EETEPA / 2017 - 2019<br>
+                Cargo: Professor Coordenador
+              </p>
+              <p class="text col-sm-8">
+                Principais funções: Planejar e realizar visitas técnicas para turmas de alunos; ministrar aulas
+                relacionadas a grade de tecnologia e desenvolvimento; realizar aulas praticas de
+                desenvolvimentos; planejar palestras e eventos com alunos e outras instituições de ensino.
+              </p>
+            </div>
+            <div id="containerAbout" style="width: 100%;">
+              <p class="text col-sm-3" style="align-self: center">
+                Minuto Web / 2016 - 2016<br>
+                Cargo: Desenvolvedor web
+              </p>
+              <p class="text col-sm-8">
+                Principais funções: Criar novos layouts e soluções para clientes, desenvolver sistemas web
+                para várias plataformas, otimizar sistemas e soluções web.
+              </p>
+            </div>
+            <div class="container">
+              <p class="text col-sm-3" style="align-self: center">
+                Grupo Marcovel / 2014 - 2015<br>
+                Cargo: Webmaster
+              </p>
+              <p class="text col-sm-8">
+                Principais funções: Atualizar os sites das empresas do grupo, com informações de produtos
+                (veículos), promoções, responder/encaminhar e-mails de clientes, gerar relatórios de
+                contatos, visitas e cliques, resolver problemas que possam ocorrer na estrutura do site,
+                propor soluções para atrair clientes através do site.
+              </p>
+            </div>
+      </section>
+
+      <!--SKILL-->
+      <section id="skill">
+        <div class="containerSkill">
+
+          <div class="col-md-12" style="align-self: center;">
+            <h2>Habilidades</h2>
+          </div>
+
+          <div class="container" style="background-color: #e6806e; border-radius: 2em;">
+            <div class="col-md-6">
+          <!--SKILLBOX-->
+          <!--div class="container" id="skillBox"-->
+            <!--HTML-->
+            <div class="container" id="skillBox1">
+              <div class="col-md-3">
+                HTML
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" style="width: 98%"></div>
+                </div>
+              </div>
+            </div>
+            <!--CSS-->
+            <div class="container" id="skillBox1">
+              <div class="col-md-3">
+                CSS
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%"></div>
+                </div>
+              </div>
+            </div>
+            <!--JS-->
+            <div class="container" id="skillBox1">
+                <div class="col-md-3">
+                  JavaScript
+                </div>
+                <div class="col-md-9" id="bars">
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                    </div>
+                </div>                        
+            </div>
+            <!--REACT-->
+            <div class="container" id="skillBox1">
+              <div class="col-md-3">
+                React
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" style="width: 37%"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <!--REACT NATIVE-->
+            <div class="container" id="skillBox1">
+              <div class="col-md-3">
+                React-Native
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width:39%"></div>
+                </div>
+              </div>
+            </div>
+            <!--PHP-->
+            <div class="container" id="skillBox1" >
+              <div class="col-md-3">
+                PHP
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
+                </div>
+              </div>
+            </div>
+            <!--JAVA-->
+            <div class="container" id="skillBox1" >
+              <div class="col-md-3">
+                Java
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+                </div>
+              </div>
+            </div>
+            <!--SQL-->
+            <div class="container" id="skillBox1" >
+              <div class="col-md-3">
+                SQL
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="container">
+            
+          </div>
+
+            <!--Ingles-->
+            <div class="container" id="skillBox1" style=" border-radius: 2em;" >
+              <div class="col-md-3">
+                Ingles
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!--Photoshop/GIMP-->
+            <div class="container" id="skillBox1" style=" border-radius: 2em;">
+              <div class="col-md-3">
+                --Photoshop/GIMP--
+              </div>
+              <div class="col-md-9" id="bars">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+        </div>  
+      </section>
+
+
+      
+      <!--FOOTER-->
+    <footer class="container-fluid" id="footer">
+      <div class="row ">
+        <section class="col-6" id="name">
+          <h2>Moises Cardozo de Paula</h2>
+        </section>
+        <section class="col-6" id="redes">
+          <a href="https://twitter.com/moisesgobila/">
+            <i class="fab fa-twitter-square fa-4x"></i>
+          </a>
+          <a href="mailto:mcpfla@gmail.com">
+            <i class="fas fa-envelope-square fa-4x"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=+5562982064577">
+            <i class="fab fa-whatsapp-square fa-4x"></i>
+          </a>
+          <a href="https://github.com/gobila">
+            <i class="fab fa-github-square fa-4x"></i>
+          </a>
+        </section>
+      </div>
+
+    </footer>
+
+  </body>
+</html>
